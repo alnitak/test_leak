@@ -1,6 +1,6 @@
 ## test_leak
 
-Test `setImageSampler` memory leaks (Linux and Android simulator)
+Test `FragmentShader.setImageSampler` memory leaks (Linux and Android simulator)
 
 By running this app, memory leaks start to be noticed after 40~60 seconds on the *Operating System Monitor*. 
 Memory tab of DevTools doesn't report leaks.

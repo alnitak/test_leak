@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
-/// Test setImageSampler memory leaks (Linux and Android simulator)
+/// Test `FragmentShader.setImageSampler` memory leaks (Linux and Android simulator)
 /// 
 /// By running this app, memory leaks start to be noticed after 40~60 seconds
 /// on the operating system monitor. 
