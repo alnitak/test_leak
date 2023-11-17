@@ -1,0 +1,36 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "test_leak",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "test_leak (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "test_leak (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "local engine",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                    "--local-engine", "host_debug_unopt", 
+                    "--local-engine-host", "host_debug_unopt",
+                    "--local-engine-src-path", "~/FLUTTER/flutter/engine/src",
+                    "--trace-skia"
+                ]
+          }
+    ]
+}
