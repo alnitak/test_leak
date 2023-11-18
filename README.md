@@ -10,8 +10,9 @@ Memory tab of DevTools doesn't report leaks.
 - When pressing the button, the `Ticker` starts updating shader outputs.
 - `shader_a` uses the lastest output of `shader_b` as sampler2D uniform and `shader_b` uses the latest output of itself.
 
-Removing the sampler2D uniform from `shader_b.frag` (and of course 
-the `setImageSampler` from `computeShader2()`), the leak doesn't occurs.
+The leak doesn't occurs when:
+ - Removing the sampler2D uniform from `shader_b.frag` (and of course the `setImageSampler` from `computeShader2()`)
+ - in `computeShader2()` replace `setImageSampler(0, sampler1 ?? blankImage!);` with `setImageSampler(0, blankImage!);` where `blankImage` is the image loaded at start
 
 Here a screenshot of the System Operating System memory monitor.
 After about 40 seconds memory leaks start growing till 100% is reached.
