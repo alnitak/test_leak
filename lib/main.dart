@@ -211,7 +211,8 @@ class _TestLeakState extends State<TestLeak>
       ..setFloat(0, size.width)
       ..setFloat(1, size.height)
       ..setFloat(2, sw.elapsedMilliseconds / 1000) // iTime
-      ..setImageSampler(0, sampler1 ?? blankImage!);
+      /// using just [blankImage], which is loaded at start, the issue doesn't occur
+      ..setImageSampler(0, sampler2 ?? blankImage!);
 
     sampler2?.dispose();
     sampler2 = null;
